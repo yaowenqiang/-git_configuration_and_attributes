@@ -41,6 +41,48 @@ Additional Configuration Capabilities
 + Additional levels
   + includeIf
 
+> git config --global user.name 'user name'
+
+> check config 
+
+> git config --global user.name 
+
+
+> cat ~/.gitconfig
+
+> git config --system core.editor 
+
+> git config --local user.email useremail 
+
+> push.autoSetupRemote
+
+> init.defaultBranch
+
+> git config --list
+
+> git config --list | sort
+
+> git config --list --show-origin
+
+> git config --list --show-origin --show-scope
+
+
+> git config --local --unset user.name
+
+> git config --local --remove-section user
+
+
+## Managing Files with Attributes
+
+
+
+
+
+
+
+
+
+
 
 
 
