@@ -32,6 +32,63 @@
 + Not pushed or pulled
 + Access using --local (or no) flag
 
+> exif image.jpeg
+
+
+~/.gitconfig
+
+[diff 'jpeg']
+    textconv = exif
+
+.gitattributes
+*.jpeg -text -diff
+
+.git/info/attributes
+
+*.jpeg diff=jpeg
+
+### End of line Attributes
+
+
+.gitignore 
+
+*.js text
+*.ps1 eol=crlf
+*.sh eol=lf
+
+
+### git Filter Attribute
+
+
+.git/info/attributes
+
+*.ex filter=myfilter
+
+~/.gitconfig
+
+[filter 'myfilter']
+    clean =
+    smudge = 
+
+~/.gitconfig
+
+[filter 'mix-format']
+    clean = mix format -
+    smudge = cat
+
+
+A Better Way to Auto-format
+
+Git Hooks
+
+
+Process Filters
+1. first
+2. second
+3. third
+
+
+
 > git config --local user.email 'jacky.email'
 
 Additional Configuration Capabilities
@@ -73,6 +130,31 @@ Additional Configuration Capabilities
 
 
 ## Managing Files with Attributes
+
+
+### Git Attributes Hierarchy
+
++ system [install]/etc/gitattributes
++ global core.atrributeFile
++ local .git/info/attributes
++ .gitattributes
+
+### Setting Git Attributes
+
+Avoid changing end-of-line characters
+
+.gitattributes or images/.gitattributes
+
+> cat image.jpeg | hexdump -C
+
+*.jpeg -text -diff
+*.jpeg binary
+
+
+> git diff
+
+
+
 
 
 
