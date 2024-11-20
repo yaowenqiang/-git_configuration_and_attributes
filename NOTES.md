@@ -202,3 +202,37 @@ Defined in Git configuration
 
 
 
+
+Recommended Configuration: Init
+
+git config --global init.defaultBranch main
+
+Recommended Configuration: Mistakes
+
+git config --global help.autoCorrect prompt
+
+Recommended Configuration: Branches
+
+
+git config --global branch.sort -authordate
+git config --global pager.branch false
+
+Recommended Configuration: Commits
+
+git config --global core.editor 'code --wait'
+git config --global commit.verbose true
+
+Recommended Configuration: Push
+
+git config --global push.autoSetupRemote true
+
+
+Recommended Configuration: Pull
+
+git config --global pull.rebase true
+
+
+Recommended Configuration: Rebases
+
+git config --global rebase.autoStash true
+
