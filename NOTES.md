@@ -153,21 +153,50 @@ Avoid changing end-of-line characters
 
 > git diff
 
+https://github.com/gitattributes/gitattributes
+
+https://github.com/olivierverdier/zsh-git-prompt
+
+https://github.com/magicmonty/bash-git-prompt
+
+> git reset-staging
+
+## Alias
+
+### Shell Alias
+
++ alias g='git status'
++ alias ga='git add'
++ alias gc='git commit --verbose'
++ alias gs='git switch'
++ alias gpf='git push --force-with-lease'
+
+### Git Alias
+
+[alias]
+    a = add
+    b = branch
+    ci = commit
+    co = checkout
+    st = status
+    stash-all = stash save --include-untracked
+    undo = reset --soft ^HEAD
+    glog = log --graph --pretty=format:...
+    unstage = reset HEAD --
+
+    push-staging = push origin +HEAD:staging
+    reset-staging = push origin +refs/remotes/origin/main:refs/heads/staging
+    quick-commit = '!f() { git add . && git commit --verbose; }; f'
 
 
 
 
 
+https://blog.scottnonnenberg.com/better-git-configuration/
 
+https://writeabout.net/2020/12/03/gitvent-a-git-tip-every-day/
 
-
-
-
-
-
-
-
-
+Defined in Git configuration
 
 
 

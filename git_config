@@ -1,0 +1,4 @@
+[filter 'secrets']
+  clean = sed -e 's/abc123/{API_KEY_PLACEHOLDER}/g' -e 's/my_secret/{SECRET_PLACEHOLDER}/g'
+  smudge = sed -e 's/{API_KEY_PLACEHOLDER}/abc123/g' -e 's/{SECRET_PLACEHOLDER}/my_secret/g'
+  required
